@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = (props) => {
   // const navbarr = ["Home", "About", "Blog", "Services", "Contact Us"];
-  const navbarr = [{name: "Home", path: "/home"},{name: "About", path: "/about"},{name:"Blog", path: "/blog"},{name:"Services", path: "/services"},{name:"Contact Us", path: "/contact-us"}];
+  const navbarr = [{name: "Home", path: "/"},{name: "About", path: "/about"},{name:"Blog", path: "/blog"},{name:"Services", path: "/services"},{name:"Contact Us", path: "/contact-us"}];
   const profile = ["Your Profile", "Settings", "Sign Out"];
   const [show , setShow] = useState(false);
 
