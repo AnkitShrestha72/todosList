@@ -35,21 +35,7 @@ function App() {
  
 
   const [ todos, setTodos] = useState ([
-    {
-      sno: 1,
-      title: "Go to the Market",
-      Desc: "You have to go to the market to get the job done1"
-    },
-    {
-      sno: 2,
-      title: "Go to the Mall",
-      Desc: "You have to go to the Mall to get the job done2"
-    },
-    {
-      sno: 3,
-      title: "Go to the Ground",
-      Desc: "You have to go to the Ground to get the job done3"
-    }]
+   ]
   );
  
 
