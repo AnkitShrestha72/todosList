@@ -1,8 +1,10 @@
 import React, { Fragment } from "react";
 import { useState } from "react"; 
+import { Link } from "react-router-dom";
 
 const Navbar = (props) => {
-  const navbarr = ["Home", "About", "Blog", "Services", "Contact Us"];
+  // const navbarr = ["Home", "About", "Blog", "Services", "Contact Us"];
+  const navbarr = [{name: "Home", path: "/home"},{name: "About", path: "/about"},{name:"Blog", path: "/blog"},{name:"Services", path: "/services"},{name:"Contact Us", path: "/contact-us"}];
   const profile = ["Your Profile", "Settings", "Sign Out"];
   const [show , setShow] = useState(false);
 
@@ -42,7 +44,7 @@ const Navbar = (props) => {
             return(
               <Fragment key={i}>
             
-              <a href="#" className="bg-gray-600 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">{navData}</a>
+              <Link to={`${navData.path}`} className="bg-gray-600 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">{navData.name}</Link>
               </Fragment>
             
             )
@@ -79,7 +81,7 @@ const Navbar = (props) => {
             {profile.map((profileData , i)=>{
               return(
                 <Fragment key={i}>
-                <a href="#" className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="0" id="user-menu-item-0">{profileData}</a>
+                <Link to="#" className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="0" id="user-menu-item-0">{profileData}</Link>
                 </Fragment>
               )
             })}
@@ -94,10 +96,10 @@ const Navbar = (props) => {
   <div className="sm:hidden" id="mobile-menu">
     <div className="space-y-1 px-2 pb-3 pt-2">
      
-      <a href="#" className="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Dashboard</a>
-      <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Team</a>
-      <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Projects</a>
-      <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Calendar</a>
+      <a to="#" className="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Dashboard</a>
+      <a to="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Team</a>
+      <a to="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Projects</a>
+      <a to="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Calendar</a>
     </div>
   </div>
 </nav>

@@ -12,6 +12,7 @@ const AddToDo = (props) => {
       }
       else{
         props.addToDo(title , Desc)
+        // This will leave the input field empty 
         setTitle("");
         setDesc("");
       }
