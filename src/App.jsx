@@ -64,13 +64,13 @@ function App() {
         <Navbar title="TO DOS LIST" />
         <Routes>
           <Route
-           exact path="/Home"  element={<Test addToDo={addToDo} todos={todos} onDelete={onDelete}/>} >
+           exact path="/"  element={<Test addToDo={addToDo} todos={todos} onDelete={onDelete}/>} >
            
               
             
           </Route>
 
-          <Route  exact path="/About" element={<About/>}>
+          <Route  exact path="/about" element={<About/>}>
           
           </Route>
         </Routes>
